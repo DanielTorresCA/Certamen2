@@ -1,0 +1,116 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="certamen2.MainPage">
+
+
+    <ScrollView>
+
+        <VerticalStackLayout
+                Background="LightSteelBlue">
+
+            <Border
+                Margin="12"
+                Stroke="DarkCyan"
+                Padding="10"
+                StrokeThickness="3"
+                StrokeShape="Rectangle 40,0,0,40"
+                Background="WhiteSmoke"
+                HorizontalOptions="Center"
+                >
+                <Label Text="Ingreso meseros"
+                   VerticalOptions="StartAndExpand"
+                   HorizontalOptions="Center"
+                   Background= "WhiteSmoke"
+                   TextColor="Black"
+                   TextTransform="Uppercase"
+                   FontSize="Title"
+                   
+                   />
+            </Border>
+
+            <Border
+                Margin="50"
+                Stroke="DarkCyan"
+                Padding="5"
+                StrokeThickness="3"
+                StrokeShape="RoundRectangle 40,0,0,40"
+                Background="Ivory"
+                HorizontalOptions="Center"
+                >
+
+                <Image Source="login.png"
+                       
+                       HorizontalOptions="Center"
+                       VerticalOptions="Center"
+                       WidthRequest="100"
+                       HeightRequest="100"/>
+            </Border>
+
+            <Entry
+                Margin="10"
+                x:Name="Rut"
+                Placeholder="Ingrese su Rut"
+                WidthRequest="180"
+                MaxLength="20">
+            </Entry>
+            <Entry
+                x:Name="Nombre"
+                Placeholder="Ingrese Nombre"
+                WidthRequest="180">
+            </Entry>
+            <Entry
+                Margin="10"
+                x:Name="Ap_pat"
+                Placeholder="Ingrese Apellido paterno"
+                WidthRequest="180">
+            </Entry>
+            <Entry
+                Margin="0,0,0,10"
+                x:Name="Ap_mat"
+                Placeholder="Ingrese Apellido Materno"
+                WidthRequest="180">
+            </Entry>
+
+            <StackLayout Orientation="Horizontal" HorizontalOptions="Center">
+                <Entry x:Name="Boton_dia"
+                       Keyboard="Numeric"
+                    Placeholder="Dia" WidthRequest="50" 
+                       MaxLength="2"/>
+                <Entry x:Name="Boton_mes" 
+                       Keyboard="Numeric"
+                    Placeholder="Mes" WidthRequest="50" MaxLength="2"/>
+                <Entry x:Name="Boton_anio"
+                       Keyboard="Numeric"
+                    Placeholder="Año nacimiento" WidthRequest="50" MaxLength="4" />
+            </StackLayout>
+
+            <StackLayout Orientation="Horizontal" >
+                <Label Text="Sexo: "
+                       Margin="10"
+                       Padding="100,0,0,0"
+                       FontSize="Header"  
+                       HorizontalOptions="Start">
+                </Label>
+
+                <RadioButton Content="hombre  " />
+                <RadioButton Content="mujer "/>
+            </StackLayout>
+
+            <Button     
+                    x:Name="Boton_maestro"
+                    Text="Confirmar"
+                    Margin="25"
+                    Background="LightGoldenrodYellow"
+                    Clicked="Boton_maestro_Clicked"/>
+
+        </VerticalStackLayout>
+        
+        
+
+
+
+
+
+    </ScrollView>
+</ContentPage>
